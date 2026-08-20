@@ -19,4 +19,4 @@ records = parse_history(reader)
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT see [LICENSE](LICENSE).

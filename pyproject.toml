@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "libre2-reader"
+version = "0.1.0"
+description = "Read-only Python library for reading FreeStyle Libre 2 glucose data over USB HID"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Ayoub", email = "ayoubmanjora@gmail.com" },
+]
+requires-python = ">=3.10"
+keywords = [
+    "freestyle",
+    "libre",
+    "cgm",
+    "glucose",
+    "diabetes",
+    "hid",
+    "abbott",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Healthcare Industry",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = [
+    "freestyle-hid>=1.1",
+    "hidapi>=0.14",
+]
+
+[project.urls]
+Homepage = "https://github.com/Ayoubmanjoura/libre2-reader"
+Repository = "https://github.com/Ayoubmanjoura/libre2-reader"
+Issues = "https://github.com/Ayoubmanjoura/libre2-reader/issues"
+
+[project.scripts]
+libre-probe = "libre.probe:probe"
+
+[tool.setuptools.packages.find]
+where = ["src"]
